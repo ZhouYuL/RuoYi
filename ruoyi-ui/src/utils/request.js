@@ -8,6 +8,8 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 创建axios实例
 const service = axios.create({
   // axios中请求配置有baseURL选项，表示请求URL公共部分
+  // VUE_APP_BASE_API = '/prod-api'，
+  // 执行npm run build的时候就会将/prod-api打包进环境变量中,生产环境所有接口的域名都会是prod-api
   baseURL: process.env.VUE_APP_BASE_API,
   // 超时
   timeout: 10000
